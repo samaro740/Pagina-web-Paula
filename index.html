@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Amigos Dorados — Citas para personas mayores</title>
+  <link rel="stylesheet" href="./estilos/style1.css" />
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <div class="logo" aria-hidden="true">🌟 Amigos Dorados</div>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <button id="increaseText" class="control-btn" aria-pressed="false">A+</button>
+        <button id="toggleContrast" class="control-btn" aria-pressed="false">Alto contraste</button>
+        <a class="primary-btn" href="#crear-perfil">Crear perfil</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" role="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <h1 id="hero-title">Encuentra compañía y nuevas amistades</h1>
+      <p class="lead">Un lugar seguro y sencillo para personas mayores que buscan amistad, conversación o algo más.</p>
+      <div class="hero-actions">
+        <a class="primary-btn large" href="#explorar">Explorar perfiles</a>
+        <a class="secondary-btn large" id="learnMore" href="#como-funciona">Cómo funciona</a>
+      </div>
+    </section>
+
+    <section id="como-funciona" class="card info" aria-labelledby="como-title">
+      <h2 id="como-title">Cómo funciona</h2>
+      <ul>
+        <li>Registro simple en 3 pasos (nombre, edad, intereses).</li>
+        <li>Controles de privacidad claros y soporte por teléfono.</li>
+        <li>Perfiles con fotos grandes, biografía clara y etiquetas de intereses.</li>
+      </ul>
+    </section>
+
+    <section id="explorar" class="profiles" aria-labelledby="explorar-title">
+      <h2 id="explorar-title">Perfiles destacados</h2>
+
+      <div class="profile-grid" role="list">
+        <article class="profile-card" role="listitem" tabindex="0" aria-label="Perfil de Carmen, 68 años, Madrid">
+          <img src="https://via.placeholder.com/220x220?text=Carmen" alt="Foto de Carmen" class="profile-photo" />
+          <div class="profile-content">
+            <h3>Carmen, 68</h3>
+            <p class="location">Madrid</p>
+            <p class="bio">Me encanta la jardinería, leer y pasear con mi perro. Busco compañía para tardes de café y excursiones cortas.</p>
+            <div class="profile-actions">
+              <button class="like-btn" aria-pressed="false" aria-label="Me gusta Carmen">❤ Me gusta</button>
+              <button class="message-btn" aria-label="Enviar mensaje a Carmen">✉️ Mensaje</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="profile-card" role="listitem" tabindex="0" aria-label="Perfil de José, 72 años, Sevilla">
+          <img src="https://via.placeholder.com/220x220?text=José" alt="Foto de José" class="profile-photo" />
+          <div class="profile-content">
+            <h3>José, 72</h3>
+            <p class="location">Sevilla</p>
+            <p class="bio">Amante de la música clásica y la pesca. Me gustaría conocer a alguien para compartir paseos y tertulias.</p>
+            <div class="profile-actions">
+              <button class="like-btn" aria-pressed="false" aria-label="Me gusta José">❤ Me gusta</button>
+              <button class="message-btn" aria-label="Enviar mensaje a José">✉️ Mensaje</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="profile-card" role="listitem" tabindex="0" aria-label="Perfil de María, 75 años, Valencia">
+          <img src="https://via.placeholder.com/220x220?text=María" alt="Foto de María" class="profile-photo" />
+          <div class="profile-content">
+            <h3>María, 75</h3>
+            <p class="location">Valencia</p>
+            <p class="bio">Cocinera aficionada, me encanta bailar y las manualidades. Busco nuevas amistades con intereses similares.</p>
+            <div class="profile-actions">
+              <button class="like-btn" aria-pressed="false" aria-label="Me gusta María">❤ Me gusta</button>
+              <button class="message-btn" aria-label="Enviar mensaje a María">✉️ Mensaje</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="crear-perfil" class="card form" aria-labelledby="crear-title">
+      <h2 id="crear-title">Comienza en 3 pasos</h2>
+      <ol>
+        <li>Haz clic en "Crear perfil".</li>
+        <li>Sube una foto y escribe una breve biografía.</li>
+        <li>Elige tus intereses y preferencias de privacidad.</li>
+      </ol>
+      <a class="primary-btn" href="#" role="button">Crear perfil ahora</a>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>© Amigos Dorados — Diseñado para mayor simplicidad y seguridad.</p>
+      <p class="small">Soporte: +34 900 000 000 — <a href="#">Política de privacidad</a></p>
+    </div>
+  </footer>
+
+  <script src="" defer></script>
+</body>
+</html>
