@@ -1,0 +1,168 @@
+    :root{
+      --bg:#0f1020;
+      --card:#17182e;
+      --accent:#ff6b6b;
+      --accent-2:#8a79ff;
+      --text:#e9ecff;
+      --muted:#b9beff;
+      --success:#4be3a4;
+      --shadow:0 12px 30px rgba(0,0,0,.35);
+      --radius:18px;
+      --radius-sm:12px;
+      --grad:linear-gradient(135deg, var(--accent), var(--accent-2));
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:radial-gradient(1200px 500px at 80% -10%, #1b1d39 0%, #0f1020 60%), var(--bg); color:var(--text); font-family:Poppins, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif;}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+
+    /* Layout */
+    .wrap{max-width:1100px;margin:0 auto;padding:28px}
+    header{
+      position:relative;
+      padding:64px 0 30px;
+    }
+    .nav{
+      display:flex;align-items:center;justify-content:space-between;
+      gap:16px;margin-bottom:20px
+    }
+    .brand{
+      display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:.3px
+    }
+    .logo{
+      width:42px;height:42px;border-radius:50%;
+      background:var(--grad);
+      box-shadow:0 8px 22px rgba(255,107,107,.35), 0 10px 28px rgba(138,121,255,.25);
+    }
+    .cta-min{
+      padding:10px 16px;border-radius:999px;background:transparent;
+      border:1px solid rgba(233,236,255,.18);
+      color:var(--text);
+      transition:.2s ease; backdrop-filter: blur(6px);
+    }
+    .cta-min:hover{border-color:transparent;background:var(--grad); box-shadow:var(--shadow)}
+
+    .hero{
+      display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:center
+    }
+    .hero h1{
+      font-size:clamp(28px, 4.8vw, 54px);
+      line-height:1.05;margin:0 0 12px;
+    }
+    .hero p{color:var(--muted);margin:0 0 20px}
+    .big-cta{
+      display:inline-flex;align-items:center;gap:12px;
+      padding:14px 20px;border-radius:999px;background:var(--grad);
+      color:#fff;font-weight:700;box-shadow:var(--shadow);
+      border:none;cursor:pointer;transition:transform .08s ease;
+    }
+    .big-cta:active{transform:scale(.98)}
+    .pill{
+      display:inline-flex;align-items:center;gap:8px;
+      background:rgba(255,255,255,.06); color:var(--muted);
+      padding:8px 12px;border-radius:999px;border:1px solid rgba(233,236,255,.12);
+    }
+
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      border:1px solid rgba(233,236,255,.12);
+      border-radius:var(--radius); padding:18px; backdrop-filter:blur(6px);
+      box-shadow:var(--shadow)
+    }
+    .hero-art{
+      position:relative; overflow:hidden; border-radius:var(--radius);
+    }
+    .hero-art img{
+      aspect-ratio:4/3; object-fit:cover; border-radius:var(--radius);
+    }
+    .floating{
+      position:absolute; right:14px; bottom:14px;
+      background:rgba(15,16,32,.8); border:1px solid rgba(233,236,255,.12);
+      color:var(--text); padding:10px 12px; border-radius:12px;
+      font-size:14px; display:flex; align-items:center; gap:8px;
+    }
+
+    /* Secciones */
+    section{margin:70px 0}
+    section h2{font-size:clamp(22px, 3.2vw, 36px);margin:0 0 14px}
+    .sub{color:var(--muted);margin:0 0 24px}
+
+    /* Quiénes somos */
+    .about .editable{
+      min-height:110px; border:1px dashed rgba(233,236,255,.18);
+      border-radius:var(--radius-sm); padding:14px; color:var(--text);
+      background:rgba(255,255,255,.03)
+    }
+    .join-row{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:16px}
+
+    /* Testimonios */
+    .testimonials{
+      display:grid; grid-template-columns:60px 1fr 60px; gap:16px; align-items:center
+    }
+    .arrow{
+      width:52px;height:52px;border-radius:999px;border:1px solid rgba(233,236,255,.16);
+      background:rgba(255,255,255,.06); color:var(--text); display:grid; place-items:center;
+      cursor:pointer; transition:.2s ease;
+    }
+    .arrow:hover{background:var(--grad); border-color:transparent}
+    .slider{
+      position:relative; overflow:hidden; border-radius:var(--radius);
+    }
+    .track{
+      display:flex; transition:transform .4s ease; will-change:transform;
+    }
+    .slide{
+      min-width:100%; padding:22px; background:var(--card);
+      border:1px solid rgba(233,236,255,.12);
+    }
+    .quote{
+      font-size:18px; line-height:1.5; color:#f7f7ff;
+    }
+    .author{
+      margin-top:10px; color:var(--muted); font-size:14px;
+    }
+    .dots{display:flex;gap:8px;justify-content:center;margin-top:12px}
+    .dot{
+      width:8px;height:8px;border-radius:50%;
+      background:rgba(233,236,255,.22); transition:.2s ease
+    }
+    .dot.active{background:var(--accent)}
+
+    /* Beneficios */
+    .benefits-grid{
+      display:grid; grid-template-columns:repeat(2,1fr); gap:18px
+    }
+    .benefit{
+      display:grid; grid-template-columns:60px 1fr; gap:14px; align-items:start;
+      background:var(--card); border:1px solid rgba(233,236,255,.12);
+      border-radius:var(--radius); padding:16px;
+    }
+    .icon{
+      width:60px;height:60px;border-radius:16px;background:var(--grad);
+      box-shadow:var(--shadow); display:grid; place-items:center; font-size:26px
+    }
+    .benefit h3{margin:0 0 6px;font-size:18px}
+    .benefit p{margin:0;color:var(--muted)}
+
+    /* Contacto */
+    .contact .info{
+      display:grid; grid-template-columns:1fr 1fr; gap:16px
+    }
+    .info-item{
+      background:rgba(255,255,255,.05); border:1px solid rgba(233,236,255,.12);
+      border-radius:var(--radius-sm); padding:14px
+    }
+    .info-item label{display:block;color:var(--muted);font-size:13px;margin-bottom:6px}
+    .info-item .value{font-weight:600}
+
+    /* Footer */
+    footer{
+      margin:50px 0 10px; color:var(--muted); font-size:13px; text-align:center
+    }
+
+    /* Responsivo */
+    @media (max-width:920px){
+      .hero{grid-template-columns:1fr}
+      .benefits-grid{grid-template-columns:1fr}
+      .testimonials{grid-template-columns:50px 1fr 50px}
+    }
