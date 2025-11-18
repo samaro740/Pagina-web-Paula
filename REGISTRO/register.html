@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Registro</title>
+  <link rel="stylesheet" href="./estiloregister.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="wrap">
+    <header class="header">
+      <div class="brand">
+        <div class="logo"></div>
+        <span>[Nombre pagina]</span>
+      </div>
+      <h1>Crear cuenta ✨</h1>
+      <p class="sub">Completa tus datos para empezar a conectar.</p>
+    </header>
+
+    <main>
+      <form class="form">
+        <div class="field">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+        </div>
+
+        <div class="field">
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+        </div>
+
+        <div class="field">
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" name="password" placeholder="••••••••" required>
+        </div>
+
+        <div class="field">
+          <label for="confirmar">Confirmar contraseña</label>
+          <input type="password" id="confirmar" name="confirmar" placeholder="Repite tu contraseña" required>
+        </div>
+
+        <div class="field">
+          <label for="edad">Edad</label>
+          <input type="number" id="edad" name="edad" min="18" max="99" placeholder="18+" required>
+        </div>
+
+        <div class="field">
+          <label for="genero">Género</label>
+          <select id="genero" name="genero" required>
+            <option value="">Selecciona...</option>
+            <option value="hombre">Hombre</option>
+            <option value="mujer">Mujer</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="busco">Busco</label>
+          <select id="busco" name="busco" required>
+            <option value="">Selecciona...</option>
+            <option value="hombre">Hombre</option>
+            <option value="mujer">Mujer</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="btn primary">Registrarse</button>
+          <button href="./inicio de sesion/inicio-sesion.html" type="button" class="btn secondary" onclick="window.location.href='./inicio de sesion/inicio-sesion.html'">Inicio de sesión</button>
+        </div>
+      </form>
+    </main>
+  </div>
+</body>
+</html>

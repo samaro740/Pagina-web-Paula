@@ -16,7 +16,7 @@
         <div class="logo" aria-hidden="true"></div>
         <span>Cits</span>
       </div>
-      <button class="cta-min" onclick="scrollToJoin()">Crear cuenta</button>
+      <button class="cta-min" onclick="scrollToJoin()" onclick="window.location.href='./REGISTRO/register.html'">Crear cuenta</button>
     </div>
     <div class="hero">
       <div>
@@ -42,7 +42,7 @@
         Entra, descubre, y permite que una nueva historia empiece contigo.
       </div>
       <div class="join-row">
-        <button class="big-cta" id="join">Únete ahora</button>
+        <button class="big-cta" id="join" onclick="window.location.href='./REGISTRO/register.html'">Únete ahora</button>
         <span class="pill">✅ Registro rápido • 🧩 Perfiles compatibles • 💬 Chat Privado</span>
       </div>
     </section>
@@ -149,7 +149,7 @@
   </footer>
 
   <script>
-    // Smooth scroll al botón de “Únete ahora”
+    // Smooth scroll al botón UNETE AHORA
     function scrollToJoin(){
       document.getElementById('join')?.scrollIntoView({behavior:'smooth', block:'center'});
     }

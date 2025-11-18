@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Recuperar contraseña</title>
+  <link rel="stylesheet" href="./contraseña.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="wrap">
+    <header class="header">
+      <div class="brand">
+        <div class="logo"></div>
+        <span>[Nombre pagina]</span>
+      </div>
+      <h1>He olvidado mi contraseña 🔒</h1>
+      <p class="sub">Introduce tu correo electrónico para recibir un enlace de verificación.</p>
+    </header>
+
+    <main>
+      <form class="form" onsubmit="return false;">
+        <div class="field">
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+        </div>
+
+        <div class="actions">
+          <button type="button" class="btn primary" id="sendBtn">Enviar correo de verificación</button>
+        </div>
+
+        <p class="info" id="countdown"></p>
+
+        <div class="actions">
+          <a href="../../register.html" class="btn secondary">registrarse</a>
+        </div>
+      </form>
+    </main>
+  </div>
+
+  <script>
+    const sendBtn = document.getElementById('sendBtn');
+    const countdown = document.getElementById('countdown');
+    let timer;
+
+    sendBtn.addEventListener('click', () => {
+      sendBtn.disabled = true;
+      let timeLeft = 60;
+      countdown.textContent = `Puedes volver a enviar en ${timeLeft}s`;
+
+      timer = setInterval(() => {
+        timeLeft--;
+        countdown.textContent = `Puedes volver a enviar en ${timeLeft}s`;
+        if(timeLeft <= 0){
+          clearInterval(timer);
+          countdown.textContent = "";
+          sendBtn.disabled = false;
+          sendBtn.textContent = "Enviar correo de verificación";
+        }
+      }, 1000);
+    });
+  </script>
+</body>
+</html>

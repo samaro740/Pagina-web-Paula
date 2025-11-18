@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Inicio de sesión</title>
+  <link rel="stylesheet" href="./estilosesion.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="wrap">
+    <header class="header">
+      <div class="brand">
+        <div class="logo"></div>
+        <span>[Nombre pagiuna]</span>
+      </div>
+      <h1>Inicio de sesión 🔑</h1>
+      <p class="sub">Accede a tu cuenta para seguir conectando.</p>
+    </header>
+
+    <main>
+      <form class="form">
+        <div class="field">
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+        </div>
+
+        <div class="field">
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" name="password" placeholder="••••••••" required>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="btn primary">Iniciar sesión</button>
+        </div>
+
+        <div class="links">
+          <a href="../register.html">Volver a la página de registro</a>
+          <a href="./OLVIDE CONTRASEÑA/contraseña.html">He olvidado mi contraseña</a>
+        </div>
+      </form>
+    </main>
+  </div>
+</body>
+</html>
