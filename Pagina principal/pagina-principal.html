@@ -1,105 +1,168 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Amigos Dorados — Citas para personas mayores</title>
-  <link rel="stylesheet" href="./styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial de Citas</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background: linear-gradient(135deg, #d16ba5 0%, #86a8e7 100%);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 380px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.17);
+            padding: 24px 18px 14px 18px;
+            text-align: center;
+        }
+        .logo {
+            font-size: 2.2em;
+            font-weight: 700;
+            color: #d16ba5;
+            margin-bottom: 14px;
+            letter-spacing: 2px;
+        }
+        .profile-card {
+            background: linear-gradient(115deg, #ffc2e2 0%, #d5e1ff 100%);
+            border-radius: 14px;
+            padding: 22px 12px;
+            margin-bottom: 18px;
+            box-shadow: 0 2px 10px rgba(118,74,188,.09);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 280px;
+        }
+        .profile-img {
+            width: 84px;
+            height: 84px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 11px;
+            border: 3px solid #fff;
+            box-shadow: 0 3px 12px rgba(0,0,0,.12);
+        }
+        .profile-name {
+            font-size: 1.4em;
+            font-weight: 700;
+            margin-bottom: 4px;
+            color: #3b3156;
+        }
+        .profile-age {
+            color: #666;
+            font-size: 1em;
+            margin-bottom: 7px;
+        }
+        .profile-about {
+            font-size: 1em;
+            color: #454545;
+            margin-bottom: 13px;
+            min-height: 38px;
+        }
+        .swipe-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+        .btn-swipe {
+            border: none;
+            outline: none;
+            border-radius: 50%;
+            width: 55px;
+            height: 55px;
+            font-size: 2em;
+            color: #fff;
+            background: #ff5370;
+            cursor: pointer;
+            transition: background 0.2s;
+            box-shadow: 0 3px 8px rgba(209, 107, 165, .12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn-swipe.no {
+            background: #fc5c7d;
+        }
+        .btn-swipe.yes {
+            background: #53ff8f;
+            color: #1e2923;
+        }
+    </style>
 </head>
 <body>
-  <header class="site-header" role="banner">
-    <div class="container header-inner">
-      <div class="logo" aria-hidden="true">🌟 Amigos Dorados</div>
-      <nav class="main-nav" aria-label="Navegación principal">
-        <button id="increaseText" class="control-btn" aria-pressed="false">A+</button>
-        <button id="toggleContrast" class="control-btn" aria-pressed="false">Alto contraste</button>
-        <a class="primary-btn" href="#crear-perfil">Crear perfil</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container" role="main">
-    <section class="hero" aria-labelledby="hero-title">
-      <h1 id="hero-title">Encuentra compañía y nuevas amistades</h1>
-      <p class="lead">Un lugar seguro y sencillo para personas mayores que buscan amistad, conversación o algo más.</p>
-      <div class="hero-actions">
-        <a class="primary-btn large" href="#explorar">Explorar perfiles</a>
-        <a class="secondary-btn large" id="learnMore" href="#como-funciona">Cómo funciona</a>
-      </div>
-    </section>
-
-    <section id="como-funciona" class="card info" aria-labelledby="como-title">
-      <h2 id="como-title">Cómo funciona</h2>
-      <ul>
-        <li>Registro simple en 3 pasos (nombre, edad, intereses).</li>
-        <li>Controles de privacidad claros y soporte por teléfono.</li>
-        <li>Perfiles con fotos grandes, biografía clara y etiquetas de intereses.</li>
-      </ul>
-    </section>
-
-    <section id="explorar" class="profiles" aria-labelledby="explorar-title">
-      <h2 id="explorar-title">Perfiles destacados</h2>
-
-      <div class="profile-grid" role="list">
-        <article class="profile-card" role="listitem" tabindex="0" aria-label="Perfil de Carmen, 68 años, Madrid">
-          <img src="https://via.placeholder.com/220x220?text=Carmen" alt="Foto de Carmen" class="profile-photo" />
-          <div class="profile-content">
-            <h3>Carmen, 68</h3>
-            <p class="location">Madrid</p>
-            <p class="bio">Me encanta matar moros, leer y pasear con mi perro. Aviso, soy sionista. Busco compañía para tardes de café y excursiones cortas.</p>
-            <div class="profile-actions">
-              <button class="like-btn" aria-pressed="false" aria-label="Me gusta Carmen">❤ Me gusta</button>
-              <button class="message-btn" aria-label="Enviar mensaje a Carmen">✉️ Mensaje</button>
-            </div>
-          </div>
-        </article>
-
-        <article class="profile-card" role="listitem" tabindex="0" aria-label="Perfil de José, 72 años, Sevilla">
-          <img src="https://via.placeholder.com/220x220?text=José" alt="Foto de José" class="profile-photo" />
-          <div class="profile-content">
-            <h3>José, 72</h3>
-            <p class="location">Agharta</p>
-            <p class="bio">Amante de la música clásica y la pesca. Me gustaría conocer a alguien para compartir paseos y tertulias.</p>
-            <div class="profile-actions">
-              <button class="like-btn" aria-pressed="false" aria-label="Me gusta José">❤ Me gusta</button>
-              <button class="message-btn" aria-label="Enviar mensaje a José">✉️ Mensaje</button>
-            </div>
-          </div>
-        </article>
-
-        <article class="profile-card" role="listitem" tabindex="0" aria-label="Perfil de María, 75 años, Valencia">
-          <img src="https://via.placeholder.com/220x220?text=María" alt="Foto de María" class="profile-photo" />
-          <div class="profile-content">
-            <h3>María, 75</h3>
-            <p class="location">Valencia</p>
-            <p class="bio">Cocinera aficionada, me encanta bailar y las manualidades. Busco nuevas amistades con intereses similares.</p>
-            <div class="profile-actions">
-              <button class="like-btn" aria-pressed="false" aria-label="Me gusta María">❤ Me gusta</button>
-              <button class="message-btn" aria-label="Enviar mensaje a María">✉️ Mensaje</button>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="crear-perfil" class="card form" aria-labelledby="crear-title">
-      <h2 id="crear-title">Comienza en 3 pasos</h2>
-      <ol>
-        <li>Haz clic en "Crear perfil".</li>
-        <li>Sube una foto y escribe una breve biografía.</li>
-        <li>Elige tus intereses y preferencias de privacidad.</li>
-      </ol>
-      <a class="primary-btn" href="#" role="button">Crear perfil ahora</a>
-    </section>
-  </main>
-
-  <footer class="site-footer" role="contentinfo">
     <div class="container">
-      <p>© Amigos Dorados — Diseñado para mayor simplicidad y seguridad.</p>
-      <p class="small">Soporte: +34 900 000 000 — <a href="#">Política de privacidad</a></p>
+        <div class="logo">TinderStyle</div>
+        <div class="profile-card" id="profile-card">
+            <!-- Profile content will be injected here -->
+        </div>
+        <div class="swipe-buttons">
+            <button class="btn-swipe no" onclick="handleSwipe(false)">&#10005;</button>
+            <button class="btn-swipe yes" onclick="handleSwipe(true)">&#10084;</button>
+        </div>
     </div>
-  </footer>
+    <script>
+        const profiles = [
+            {
+                name: "Carlos",
+                age: 28,
+                about: "Me encanta la aventura y conocer nuevos lugares. ¿Vamos por un café?",
+                photo: "https://randomuser.me/api/portraits/men/43.jpg"
+            },
+            {
+                name: "Sara",
+                age: 25,
+                about: "Amo el cine, los animales y las conversaciones interesantes.",
+                photo: "https://randomuser.me/api/portraits/women/65.jpg"
+            },
+            {
+                name: "Miguel",
+                age: 30,
+                about: "Fotógrafo aficionado y fan de la música indie. ¿Compartimos playlist?",
+                photo: "https://randomuser.me/api/portraits/men/28.jpg"
+            },
+            {
+                name: "Paula",
+                age: 27,
+                about: "Fan de los libros, la naturaleza y los perros. Busco conexión genuina.",
+                photo: "https://randomuser.me/api/portraits/women/34.jpg"
+            }
+            // Puedes agregar más perfiles aquí
+        ];
 
-  <script src="" defer></script>
+        let current = 0;
+
+        function showProfile(index) {
+            const profile = profiles[index];
+            if (!profile) {
+                document.getElementById('profile-card').innerHTML = `
+                    <h2>¡No hay más personas por mostrar!</h2>
+                    <p>Vuelve luego para más coincidencias.</p>
+                `;
+                return;
+            }
+            document.getElementById('profile-card').innerHTML = `
+                <img src="${profile.photo}" alt="Foto de ${profile.name}" class="profile-img" />
+                <div class="profile-name">${profile.name}</div>
+                <div class="profile-age">${profile.age} años</div>
+                <div class="profile-about">${profile.about}</div>
+            `;
+        }
+
+        function handleSwipe(like) {
+            // Aquí podrías agregar lógica para guardar los "likes"
+            current++;
+            showProfile(current);
+        }
+
+        // Muestra el primer perfil al cargar
+        showProfile(current);
+    </script>
 </body>
 </html>
