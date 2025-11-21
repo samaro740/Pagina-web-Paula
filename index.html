@@ -33,7 +33,6 @@
   </header>
 
   <main class="wrap">
-    <!-- Quiénes somos -->
     <section id="quienes-somos" class="about">
       <h2>Quiénes somos</h2>
       <p class="sub">Aquí puedes decidir libremente tu historia, tu propósito y lo que hace única a tu comunidad.</p>
@@ -49,7 +48,7 @@
 
     <hr style="border:none;height:1px;background:linear-gradient(to right, transparent, rgba(233,236,255,.18), transparent);">
 
-    <!-- Testimonios -->
+
     <section id="testimonios">
       <h2>Testimonios</h2>
       <p class="sub">Cuatro historias reales contadas por su gente. Puedes editar los textos para que reflejen tu comunidad.</p>
@@ -85,7 +84,7 @@
 
     <hr style="border:none;height:1px;background:linear-gradient(to right, transparent, rgba(233,236,255,.18), transparent);">
 
-    <!-- Beneficios -->
+
     <section id="beneficios">
       <h2>Beneficios de las citas</h2>
       <p class="sub">Cuatro razones prácticas para apostar por las citas online: claras, útiles y orientadas a tu bienestar.</p>
@@ -127,7 +126,7 @@
 
     <hr style="border:none;height:1px;background:linear-gradient(to right, transparent, rgba(233,236,255,.18), transparent);">
 
-    <!-- Contacto -->
+
     <section id="contacto" class="contact">
       <h2>Contacto por errores o problemas</h2>
       <p class="sub">Si detectas cualquier fallo, contáctanos. Responderemos con rapidez y claridad.</p>
@@ -149,12 +148,12 @@
   </footer>
 
   <script>
-    // Smooth scroll al botón UNETE AHORA
+
     function scrollToJoin(){
       document.getElementById('join')?.scrollIntoView({behavior:'smooth', block:'center'});
     }
 
-    // Carrusel de testimonios
+
     const track = document.getElementById('track');
     const slides = Array.from(track.children);
     const prev = document.getElementById('prev');
@@ -164,7 +163,7 @@
     let index = 0;
     const total = slides.length;
 
-    // Crear dots
+
     for(let i=0;i<total;i++){
       const d = document.createElement('div');
       d.className = 'dot' + (i===0 ? ' active' : '');
@@ -189,17 +188,17 @@
     prev.addEventListener('click', ()=>goTo(index-1));
     next.addEventListener('click', ()=>goTo(index+1));
 
-    // Auto-play suave (pausable al interactuar)
+
     let auto = setInterval(()=>goTo(index+1), 6000);
     [prev,next,track].forEach(el=>{
       el.addEventListener('mouseenter', ()=>clearInterval(auto));
       el.addEventListener('mouseleave', ()=> auto = setInterval(()=>goTo(index+1), 6000));
     });
 
-    // Recalcular al resize por si cambian estilos (opcional)
+
     window.addEventListener('resize', update);
 
-    // Inicial
+
     update();
   </script>
 </body>
