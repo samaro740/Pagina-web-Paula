@@ -10,35 +10,32 @@
   <link rel="stylesheet" href="./estilo-inicio.css">
 </head>
 <body>
-  <header class="wrap">
-    <div class="nav">
-      <div class="brand">
-        <div class="logo" aria-hidden="true"></div>
-        <span>[Nombre Página web]</span>
-      </div>
-      <button class="cta-min" onclick="scrollToJoin()" onclick="window.location.href='./REGISTRO/register.html'">Crear cuenta</button>
-    </div>
-    <div class="hero">
-      <div>
-        <span class="pill">✨ Encuentros que suman</span>
-        <h1>Conecta con quien te hace vibrar</h1>
-        <p>Tu espacio para conocer gente afín, hablar sin prisa y descubrir conexiones reales. Sin ruido, sin presión: solo lo que importa.</p>
-        <button class="big-cta" onclick="scrollToJoin()">Únete ahora</button>
-      </div>
-      <div class="hero-art card">
-        <img src="./Imagenes /foto-familia.avif" alt="Pareja riendo en una terraza nocturna">
-        <div class="floating">🔒 Privacidad cuidada</div>
-      </div>
-    </div>
-  </header>
+  <header class="video-header">
+  <!-- Video de fondo -->
+  <video autoplay muted loop playsinline class="bg-video">
+    <source src="./Imagenes/video1.mp4" type="video/mp4">
+    Tu navegador no soporta video en HTML5.
+  </video>
+
+  <!-- Capa oscura para mejorar contraste -->
+  <div class="overlay"></div>
+
+  <!-- Contenido centrado -->
+  <div class="header-content">
+    <img src="./Imagenes/cits.png" alt="Imagen decorativa" class="header-image">
+    <h1>Conecta con quien te hace vibrar</h1>
+    <p>Tu espacio para conocer gente afín, hablar sin prisa y descubrir conexiones reales.</p>
+    <button class="big-cta" onclick="window.location.href='./REGISTRO/register.html'">Únete ahora</button>
+  </div>
+</header>
 
   <main class="wrap">
+    <!-- Quiénes somos -->
     <section id="quienes-somos" class="about">
       <h2>Quiénes somos</h2>
       <p class="sub">Aquí puedes decidir libremente tu historia, tu propósito y lo que hace única a tu comunidad.</p>
-      <div class="editable" contenteditable="false">En [Nombre de la web] creemos en las conexiones auténticas y en las historias que pueden cambiar una vida. Somos una comunidad creada para personas que buscan algo más que un simple encuentro: aquí se viene a conocer a alguien con quien construir, compartir y, si surge, formar una familia o un proyecto de futuro.
-        Ofrecemos un espacio seguro, cercano y sincero, donde puedes relacionarte con personas que valoran la estabilidad, la confianza y las relaciones que crecen con el tiempo. Nuestro objetivo es ayudarte a encontrar a alguien con quien reír, conversar, disfrutar… y quizá comenzar una etapa llena de cariño y propósito.
-        Entra, descubre, y permite que una nueva historia empiece contigo.
+      <div class="editable" contenteditable="false">
+        En [Nombre de la web] creemos en las conexiones auténticas y en las historias que pueden cambiar una vida...
       </div>
       <div class="join-row">
         <button class="big-cta" id="join" onclick="window.location.href='./REGISTRO/register.html'">Únete ahora</button>
@@ -48,77 +45,69 @@
 
     <hr style="border:none;height:1px;background:linear-gradient(to right, transparent, rgba(233,236,255,.18), transparent);">
 
-
+    <!-- Testimonios -->
     <section id="testimonios">
       <h2>Testimonios</h2>
-      <p class="sub">Cuatro historias reales contadas por su gente. Puedes editar los textos para que reflejen tu comunidad.</p>
+      <p class="sub">Cuatro historias reales contadas por su gente.</p>
 
       <div class="testimonials">
-        <button class="arrow" aria-label="Anterior" id="prev">‹</button>
-
         <div class="slider card" id="slider">
           <div class="track" id="track">
             <div class="slide">
-              <p class="quote">“Nunca había sentido tanta calma con alguien que acababa de conocer. Aquí la gente conversa de verdad.”</p>
+              <p class="quote">“Nunca había sentido tanta calma con alguien que acababa de conocer.”</p>
               <p class="author">— A., Sevilla</p>
             </div>
             <div class="slide">
-              <p class="quote">“Me gustó que el perfil no va de presumir, va de ser. Y eso marca la diferencia.”</p>
+              <p class="quote">“Me gustó que el perfil no va de presumir, va de ser.”</p>
               <p class="author">— L., Madrid</p>
             </div>
             <div class="slide">
-              <p class="quote">“Las citas por videollamada me ahorraron tiempo y nervios. Cuando nos vimos, todo fluyó.”</p>
+              <p class="quote">“Las citas por videollamada me ahorraron tiempo y nervios.”</p>
               <p class="author">— J., Valencia</p>
             </div>
             <div class="slide">
-              <p class="quote">“La app cuida la privacidad y eso me dio confianza para abrirme sin miedo.”</p>
+              <p class="quote">“La app cuida la privacidad y eso me dio confianza.”</p>
               <p class="author">— M., Barcelona</p>
             </div>
           </div>
-        </div>
-
-        <button class="arrow" aria-label="Siguiente" id="next">›</button>
       </div>
       <div class="dots" id="dots" aria-hidden="true"></div>
     </section>
 
     <hr style="border:none;height:1px;background:linear-gradient(to right, transparent, rgba(233,236,255,.18), transparent);">
 
-
+    <!-- Beneficios -->
     <section id="beneficios">
       <h2>Beneficios de las citas</h2>
-      <p class="sub">Cuatro razones prácticas para apostar por las citas online: claras, útiles y orientadas a tu bienestar.</p>
+      <p class="sub">Cuatro razones prácticas para apostar por las citas online.</p>
 
       <div class="benefits-grid">
         <div class="benefit">
           <div class="icon">🧭</div>
           <div>
             <h3>Compatibilidad consciente</h3>
-            <p>Filtra por valores y ritmos de vida, no solo por fotos. Optimiza el tiempo con perfiles que encajan de verdad.</p>
+            <p>Filtra por valores y ritmos de vida, no solo por fotos.</p>
           </div>
         </div>
-
         <div class="benefit">
           <div class="icon">🛡️</div>
           <div>
             <h3>Privacidad y control</h3>
-            <p>Tú decides qué compartes y cuándo. Herramientas para bloquear, reportar y gestionar tu espacio con calma.</p>
+            <p>Tú decides qué compartes y cuándo.</p>
           </div>
         </div>
-
         <div class="benefit">
-          <div class="icon">⏱️</div>
+          <div class="icon">🎨</div>
           <div>
             <h3>Experiencias personalizadas</h3>
-            <p>Recibe recomendaciones de perfiles y actividades adaptadas a tus gustos. Cada encuentro se siente único y pensado para ti.</p>
+            <p>Recomendaciones adaptadas a tus gustos.</p>
           </div>
         </div>
-
         <div class="benefit">
-          <div class="icon">🌱</div>
+          <div class="icon">🌍</div>
           <div>
             <h3>Conexiones sin fronteras</h3>
-            <p>Descubre personas más allá de tu ciudad. Amplía horizontes y conecta con culturas y estilos de vida diferentes.</p>
+            <p>Descubre personas más allá de tu ciudad.</p>
           </div>
         </div>
       </div>
@@ -126,10 +115,10 @@
 
     <hr style="border:none;height:1px;background:linear-gradient(to right, transparent, rgba(233,236,255,.18), transparent);">
 
-
+    <!-- Contacto -->
     <section id="contacto" class="contact">
       <h2>Contacto por errores o problemas</h2>
-      <p class="sub">Si detectas cualquier fallo, contáctanos. Responderemos con rapidez y claridad.</p>
+      <p class="sub">Si detectas cualquier fallo, contáctanos.</p>
       <div class="info">
         <div class="info-item">
           <label>Correo electrónico</label>
@@ -148,12 +137,6 @@
   </footer>
 
   <script>
-
-    function scrollToJoin(){
-      document.getElementById('join')?.scrollIntoView({behavior:'smooth', block:'center'});
-    }
-
-
     const track = document.getElementById('track');
     const slides = Array.from(track.children);
     const prev = document.getElementById('prev');
@@ -162,7 +145,6 @@
 
     let index = 0;
     const total = slides.length;
-
 
     for(let i=0;i<total;i++){
       const d = document.createElement('div');
@@ -188,17 +170,13 @@
     prev.addEventListener('click', ()=>goTo(index-1));
     next.addEventListener('click', ()=>goTo(index+1));
 
-
     let auto = setInterval(()=>goTo(index+1), 6000);
     [prev,next,track].forEach(el=>{
       el.addEventListener('mouseenter', ()=>clearInterval(auto));
       el.addEventListener('mouseleave', ()=> auto = setInterval(()=>goTo(index+1), 6000));
     });
 
-
     window.addEventListener('resize', update);
-
-
     update();
   </script>
 </body>
