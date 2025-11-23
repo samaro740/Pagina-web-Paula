@@ -1,0 +1,69 @@
+.match-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.match-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.profiles-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.profile-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+  width: 250px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-image {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.profile-card h3 {
+  margin: 0.5rem 0 0.2rem 0;
+}
+
+.profile-card p {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #464646;
+}
+
+.actions {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.actions button {
+  border: none;
+  background: none;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.actions .accept-btn:hover {
+  color: #42db6d;
+  transform: scale(1.15);
+}
+
+.actions .reject-btn:hover {
+  color: #eb4949;
+  transform: scale(1.15);
+}
